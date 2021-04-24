@@ -34,9 +34,9 @@ class Source(Point):
             position += 1
 
     def get_frecuency(self):
-        return self.frecuency
+        return round(self.frecuency, 2)
 
-    def update(self, value, option):
+    def modify(self, value, option):
         if option == 1:
             self.x_velocity = float(value)/60
         elif option == 2:

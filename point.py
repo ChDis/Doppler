@@ -33,7 +33,7 @@ class Point(Sprite):
         self.x_coordinate += self.x_velocity
         self.y_coordinate += self.y_velocity
 
-    def update(self, value, option):
+    def modify(self, value, option):
         if option == 1:
             self.x_velocity = float(value)/60 #we divide by 60 because it will run to 60 fps, that means that it will move 1/60 of the real velocity each frame
         elif option == 2:
@@ -45,10 +45,10 @@ class Point(Sprite):
         return (self.x_coordinate, self.y_coordinate)
 
     def get_velocity_components(self):
-        return (self.x_velocity*60, self.y_velocity*60)
+        return (round(self.x_velocity*60, 2), round(self.y_velocity*60, 2))
 
     def get_velocity(self):
-        return math.sqrt(math.pow(self.x_velocity*60, 2) + math.pow(self.y_velocity*60, 2))
+        return round(math.sqrt(math.pow(self.x_velocity*60, 2) + math.pow(self.y_velocity*60, 2)), 2)
     
 
         

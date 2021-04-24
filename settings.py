@@ -11,7 +11,6 @@ class Settings:
         self.source_color = (0,255,0)
         self.wave_color = (255,255,255)
         self.limit_observers = 3
-        self.limit_sources = 1
         self.events_allowed = [pygame.MOUSEBUTTONDOWN, pygame.USEREVENT, pygame.QUIT]
 
     def get_screen_dimensions(self):
@@ -28,9 +27,6 @@ class Settings:
 
     def get_observers_allowed(self):
         return self.limit_observers
-
-    def get_sources_allowed(self):
-        return self.limit_sources
 
     def get_observer_size(self):
         return self.observer_size
